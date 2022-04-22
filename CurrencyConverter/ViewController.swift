@@ -12,6 +12,9 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     @IBOutlet weak var convertedValueLabel: UILabel!
     @IBOutlet weak var currencyNamePV: UIPickerView!
     @IBOutlet weak var selectedCurrencyLabel: UILabel!
+    @IBOutlet weak var backGroundIV: UIImageView!
+    @IBOutlet weak var convertBTN: UIButton!
+    
     var currencyCode : [String] = []
     var currencyValue : [Double] = []
     var activeCurrency = 0.0
@@ -29,20 +32,11 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         fetchJSON()
         currencyNamePV.delegate = self
         currencyNamePV.dataSource = self
-        currencyValueTF.addTarget(self, action: #selector(updateViews), for: .editingChanged)
-    }
-    
-    // MARK: - updateViews
-
-    @objc func updateViews(input : Double) {
-        guard let enteredAmount = currencyValueTF.text, let receivedAmount = Double(enteredAmount) else { return}
-        if currencyValueTF.text != nil {
-        let total = receivedAmount * activeCurrency
-        convertedValueLabel.text = String(format: "%.2f", total)
+        backGroundIV.layer.cornerRadius = 10
+        currencyNamePV.setValue(UIColor.white, forKey: "textColor")
         }
-    }
         
-    // MARK: - pickerView
+// MARK: - pickerView
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         1
@@ -58,12 +52,20 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         activeCurrency = currencyValue[row]
-        updateViews(input: activeCurrency)
         selectedCurrencyLabel.text = String(currencyCode[row])
     }
     
-    // MARK: - fetchJSON
+    // MARK: - convertBTN
+    @IBAction func convertBTN(_ sender: Any) {
+        //Convert Currency
+        guard let enteredAmount = currencyValueTF.text, let receivedAmount = Double(enteredAmount) else { return}
+        if currencyValueTF.text != nil {
+        let total = receivedAmount * activeCurrency
+        convertedValueLabel.text = String(format: "%.2f", total)
+        }
+    }
 
+    // MARK: - fetchJSON
     func fetchJSON() {
         //URL
         guard let url = URL(string: "https://open.er-api.com/v6/latest/USD") else {return}
@@ -78,10 +80,8 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
             guard let currencyData = data else {return}
             do{
                 let savedData = try JSONDecoder().decode(exchangeRates.self, from: currencyData)
-
                 self.currencyCode.append(contentsOf: savedData.rates.keys)
                 self.currencyValue.append(contentsOf: savedData.rates.values)
-
                 DispatchQueue.main.async {
                     self.currencyNamePV.reloadAllComponents()
                 }
@@ -91,6 +91,5 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
             //Fire off the data task
         }.resume()
     }
-
 }
 

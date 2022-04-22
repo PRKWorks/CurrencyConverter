@@ -11,10 +11,11 @@
 		F5E0F12F26F4AD4D000AC101 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E0F12E26F4AD4D000AC101 /* SceneDelegate.swift */; };
 		F5E0F13126F4AD4D000AC101 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E0F13026F4AD4D000AC101 /* ViewController.swift */; };
 		F5E0F13426F4AD4D000AC101 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5E0F13226F4AD4D000AC101 /* Main.storyboard */; };
-		F5E0F13626F4AD50000AC101 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5E0F13526F4AD50000AC101 /* Assets.xcassets */; };
 		F5E0F13926F4AD50000AC101 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5E0F13726F4AD50000AC101 /* LaunchScreen.storyboard */; };
 		F5E0F14126F4CB5A000AC101 /* favpng_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = F5E0F14026F4CB5A000AC101 /* favpng_arrow.png */; };
 		F5E0F14B26F4D3FB000AC101 /* underline.png in Resources */ = {isa = PBXBuildFile; fileRef = F5E0F14A26F4D3FB000AC101 /* underline.png */; };
+		F5EE40A8281282D100B8F538 /* backGroundIV.png in Resources */ = {isa = PBXBuildFile; fileRef = F5EE40A7281282D100B8F538 /* backGroundIV.png */; };
+		F5EE40AE28128D1F00B8F538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5EE40AD28128D1F00B8F538 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,11 +24,12 @@
 		F5E0F12E26F4AD4D000AC101 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F5E0F13026F4AD4D000AC101 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F5E0F13326F4AD4D000AC101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F5E0F13526F4AD50000AC101 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5E0F13826F4AD50000AC101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5E0F13A26F4AD50000AC101 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5E0F14026F4CB5A000AC101 /* favpng_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favpng_arrow.png; sourceTree = "<group>"; };
 		F5E0F14A26F4D3FB000AC101 /* underline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = underline.png; sourceTree = "<group>"; };
+		F5EE40A7281282D100B8F538 /* backGroundIV.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backGroundIV.png; sourceTree = "<group>"; };
+		F5EE40AD28128D1F00B8F538 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../CurrencyConverter copy 3/CurrencyConverter/Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +66,8 @@
 				F5E0F12E26F4AD4D000AC101 /* SceneDelegate.swift */,
 				F5E0F13026F4AD4D000AC101 /* ViewController.swift */,
 				F5E0F13226F4AD4D000AC101 /* Main.storyboard */,
-				F5E0F13526F4AD50000AC101 /* Assets.xcassets */,
+				F5EE40AD28128D1F00B8F538 /* Assets.xcassets */,
+				F5EE40A7281282D100B8F538 /* backGroundIV.png */,
 				F5E0F13726F4AD50000AC101 /* LaunchScreen.storyboard */,
 				F5E0F13A26F4AD50000AC101 /* Info.plist */,
 				F5E0F14026F4CB5A000AC101 /* favpng_arrow.png */,
@@ -132,8 +135,9 @@
 			files = (
 				F5E0F13926F4AD50000AC101 /* LaunchScreen.storyboard in Resources */,
 				F5E0F14B26F4D3FB000AC101 /* underline.png in Resources */,
-				F5E0F13626F4AD50000AC101 /* Assets.xcassets in Resources */,
+				F5EE40A8281282D100B8F538 /* backGroundIV.png in Resources */,
 				F5E0F13426F4AD4D000AC101 /* Main.storyboard in Resources */,
+				F5EE40AE28128D1F00B8F538 /* Assets.xcassets in Resources */,
 				F5E0F14126F4CB5A000AC101 /* favpng_arrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
